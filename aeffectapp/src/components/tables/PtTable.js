@@ -5,7 +5,7 @@ class PtTable extends React.Component {
   render() {
     return (
       <div id="PtTable">
-        <table className="table table-striped">
+        <table className="table table-bordered table-striped">
           <thead className="thead-dark bg-primary">
             <tr>
               <th scope="col">#</th>
