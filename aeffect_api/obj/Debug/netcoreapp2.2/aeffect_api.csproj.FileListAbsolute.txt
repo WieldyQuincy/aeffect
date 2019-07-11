@@ -1,0 +1,14 @@
+C:\Users\garif\Documents\Projects\aeffect_api\bin\Debug\netcoreapp2.2\aeffect_api.deps.json
+C:\Users\garif\Documents\Projects\aeffect_api\bin\Debug\netcoreapp2.2\aeffect_api.runtimeconfig.json
+C:\Users\garif\Documents\Projects\aeffect_api\bin\Debug\netcoreapp2.2\aeffect_api.runtimeconfig.dev.json
+C:\Users\garif\Documents\Projects\aeffect_api\bin\Debug\netcoreapp2.2\aeffect_api.dll
+C:\Users\garif\Documents\Projects\aeffect_api\bin\Debug\netcoreapp2.2\aeffect_api.pdb
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.csprojAssemblyReference.cache
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.csproj.CoreCompileInputs.cache
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.RazorAssemblyInfo.cache
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.RazorAssemblyInfo.cs
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.AssemblyInfoInputs.cache
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.AssemblyInfo.cs
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.RazorTargetAssemblyInfo.cache
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.dll
+C:\Users\garif\Documents\Projects\aeffect_api\obj\Debug\netcoreapp2.2\aeffect_api.pdb
