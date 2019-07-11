@@ -1,28 +1,33 @@
 import React from "react";
+import "./PtForm.css";
 
 class PtForm extends React.Component {
   render() {
     return (
-      <div>
+      <div id="ptform">
         <form>
           <div className="form-row">
-            <div className="form-group col-md-6">
-              <label for="inputEmail4">First Name</label>
+            <div className="form-group col-md-4">
+              <label for="inputFirstName">First Name</label>
               <input
                 type="Name"
                 className="form-control"
-                id="inputEmail4"
+                id="inputFirstName"
                 placeholder="First Name"
               />
             </div>
-            <div className="form-group col-md-6">
-              <label for="inputPassword4">Last Name</label>
+            <div className="form-group col-md-5">
+              <label for="inputLastName">Last Name</label>
               <input
                 type="Name"
                 className="form-control"
-                id="inputPassword4"
+                id="inputLastName"
                 placeholder="Last Name"
               />
+            </div>
+            <div className="form-group col-md-3">
+              <label for="inputDOB">Date of Birth</label>
+              <input type="Date" className="form-control" id="inputDOB" />
             </div>
           </div>
           <div className="form-group">
@@ -60,20 +65,27 @@ class PtForm extends React.Component {
               <input type="text" className="form-control" id="inputZip" />
             </div>
           </div>
-          <div className="form-group">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="gridCheck"
-              />
-              <label className="form-check-label" for="gridCheck">
-                Check me out
-              </label>
+          <div className="form-row">
+            <div className="form-group col-md-4">
+              <label for="inputAccount">Account #</label>
+              <input type="number" className="form-control" id="inputAccount" />
+            </div>
+            <div className="form-group col-md-4">
+              <label for="inputMedRec">Medical Record #</label>
+              <input type="number" className="form-control" id="inputMedRec" />
+            </div>
+            <div className="form-group col-md-4">
+              <label for="inputUnit">Unit</label>
+              <select className="form-control" id="inputAccount">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
             </div>
           </div>
           <button type="submit" className="btn btn-primary">
-            Sign in
+            Submit
           </button>
         </form>
       </div>
