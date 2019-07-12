@@ -5,7 +5,7 @@ class PtForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.states = {
+    this.state = {
       states: null
     };
   }
@@ -14,16 +14,18 @@ class PtForm extends React.Component {
     this.getStates();
     //console.log(JSON.stringify(this.state.states));
   }
+
   getStates() {
-    fetch("https://localhost:5001/api/FormPg/")
+    fetch("https://localhost:5001/api/FormPg")
       .then(response => response.json())
       .then(data => this.setState({ states: data }));
     // .then(console.log(JSON.stringify(this.state.states)));
   }
+
   render() {
     return (
       <div id="ptform">
-        {/* {alert(console.log(JSON.stringify(this.state.states)))} */}
+        {alert(console.log(JSON.stringify(this.state.states)))}
         <form>
           <div className="form-row">
             <div className="form-group col-md-4">
@@ -80,9 +82,9 @@ class PtForm extends React.Component {
                 defaultValue="Choose..."
               >
                 <option>Choose...</option>
-                {this.props.states.map(myUnitedState => (
+                {/* {this.props.states.map(myUnitedState => (
                   <option>{myUnitedState.StateName}</option>
-                ))}
+                ))} */}
               </select>
             </div>
             <div className="form-group col-md-2">

@@ -25,46 +25,46 @@ namespace aeffect_api.Controllers
       return states;
     }
 
-    // GET api/patients/5
-    [HttpGet("{id}")]
-    public ActionResult<IEnumerable<Patient>> Get(int id)
-    {
-      List<Patient> patients = new List<Patient>();
+    // // GET api/patients/5
+    // [HttpGet("{id}")]
+    // public ActionResult<IEnumerable<Patient>> Get(int id)
+    // {
+    //   List<Patient> patients = new List<Patient>();
 
-      using (var DB = new AeffectContext())
-      {
-        patients = DB.Patient.Where(p => p.PatientId == id).ToList();
-      }
+    //   using (var DB = new AeffectContext())
+    //   {
+    //     patients = DB.Patient.Where(p => p.PatientId == id).ToList();
+    //   }
 
-      return patients;
-    }
+    //   return patients;
+    // }
 
-    // POST api/patients/add?PatientId=int&FirstName=varchar
-    [HttpGet("/api/patients/add")]
-    //public void Post([FromBody] string value)
-    public void Get([FromQuery] int PatientId, [FromQuery] string FirstName)
-    {
-      Patient patient = new Patient();
-      patient.PatientId = PatientId;
-      patient.FirstName = FirstName;
+    // // POST api/patients/add?PatientId=int&FirstName=varchar
+    // [HttpGet("/api/patients/add")]
+    // //public void Post([FromBody] string value)
+    // public void Get([FromQuery] int PatientId, [FromQuery] string FirstName)
+    // {
+    //   Patient patient = new Patient();
+    //   patient.PatientId = PatientId;
+    //   patient.FirstName = FirstName;
 
-      using (var DB = new AeffectContext())
-      {
-        DB.Patient.Add(patient);
-        DB.SaveChanges();
-      }
-    }
+    //   using (var DB = new AeffectContext())
+    //   {
+    //     DB.Patient.Add(patient);
+    //     DB.SaveChanges();
+    //   }
+    // }
 
-    // PUT api/patients/5
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
-    }
+    // // PUT api/patients/5
+    // [HttpPut("{id}")]
+    // public void Put(int id, [FromBody] string value)
+    // {
+    // }
 
-    // DELETE api/patients/5
-    [HttpDelete("{id}")]
-    public void Delete(int id)
-    {
-    }
+    // // DELETE api/patients/5
+    // [HttpDelete("{id}")]
+    // public void Delete(int id)
+    // {
+    // }
   }
 }

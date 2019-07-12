@@ -2,6 +2,25 @@ import React from "react";
 import "./PtTable.css";
 
 class PtTable extends React.Component {
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     states = null
+  //   };
+  // }
+
+  // componentDidMount() {
+  //   this.getStates();
+  //   console.log(JSON.stringify(this.state.states));
+  // }
+  // getstates() {
+  //   fetch("https://localhost:5001/api/states/")
+  //     .then(response => response.json())
+  //     .then(data => this.setState({ states: data}))
+  //     .then(console.log(JSON.stringify(this.state.states)));
+  // }
+
   render() {
     return (
       <div id="PtTable">
