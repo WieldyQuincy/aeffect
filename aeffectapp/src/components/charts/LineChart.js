@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "react-google-charts";
+import { isPattern } from "@babel/types";
 //import "./LineChart.css";
 
 class LineChart extends React.Component {
@@ -14,10 +15,10 @@ class LineChart extends React.Component {
             loader={<div>Loading Chart</div>}
             data={[
               ["Year", "Sales", "Expenses"],
-              ["2013", 1000, 400],
-              ["2014", 1170, 460],
-              ["2015", 660, 1120],
-              ["2016", 1030, 540]
+              [new Date("2013"), 1000, 400],
+              [new Date("2014"), 1170, 460],
+              [new Date("2015"), 660, 1120],
+              [new Date("2016"), 1030, 540]
             ]}
             options={{
               title: "Company Performance",
@@ -32,6 +33,16 @@ class LineChart extends React.Component {
             }}
             // For tests
             rootProps={{ "data-testid": "1" }}
+            chartPackages={["controls"]}
+            controls={[
+              {
+                controlType: "DateRangeFilter",
+                options: {
+                  filterColumnLabel: "Year",
+                  ui: { format: { pattern: "yyyy" } }
+                }
+              }
+            ]}
           />
         </div>
       </div>
