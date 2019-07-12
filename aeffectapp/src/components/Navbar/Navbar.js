@@ -30,14 +30,14 @@ class Navbar extends React.Component {
                   </a>
                 </li>
               </Link>
-              <Link to="/form">
+              {/* <Link to="/form">
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     Form
                   </a>
                 </li>
-              </Link>
-              {/* <li className="nav-item dropdown">
+              </Link> */}
+              <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -50,25 +50,29 @@ class Navbar extends React.Component {
                   Portal
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">
-                    Add Patient
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Edit Patient
-                  </a>
+                  <Link to="/addPatient">
+                    <a className="dropdown-item" href="#">
+                      Add Patient
+                    </a>
+                  </Link>
+                  <Link to="/search">
+                    <a className="dropdown-item" href="#">
+                      Patient Search
+                    </a>
+                  </Link>
                   <div className="dropdown-divider" />
                   <a className="dropdown-item" href="#">
                     Reporting
                   </a>
                 </div>
-              </li> */}
-              <Link to="/search">
+              </li>
+              {/* <Link to="/search">
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     Search
                   </a>
                 </li>
-              </Link>
+              </Link> */}
             </ul>
             <form className="form-inline my-2 my-lg-0">
               <input

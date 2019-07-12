@@ -12,7 +12,11 @@ class LineChart extends React.Component {
             width={"1000px"}
             height={"300px"}
             chartType="AreaChart"
-            loader={<div>Loading Chart</div>}
+            loader={
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            }
             data={[
               ["Month", "Sales", "Expenses"],
               [new Date("2012, 01, 02"), 1000, 400],
