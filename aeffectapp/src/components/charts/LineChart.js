@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "react-google-charts";
-import { isPattern } from "@babel/types";
+//import { isPattern } from "@babel/types";
 //import "./LineChart.css";
 
 class LineChart extends React.Component {

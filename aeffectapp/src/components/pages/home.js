@@ -1,6 +1,5 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar.js";
-import PtForm from "../forms/PtForm.js";
 import LineChart from "../charts/LineChart.js";
 
 class Home extends React.Component {
