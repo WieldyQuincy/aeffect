@@ -9,20 +9,20 @@ namespace aeffect_api.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class PatientsController : ControllerBase
+  public class FormPgController : ControllerBase
   {
     // GET api/states
     [HttpGet]
-    public ActionResult<IEnumerable<Patient>> Get()
+    public ActionResult<IEnumerable<State>> Get()
     {
-      List<Patient> patients = new List<Patient>();
+      List<State> states = new List<State>();
 
       using (var DB = new AeffectContext())
       {
-        patients = DB.Patient.ToList();
+        states = DB.State.ToList();
       }
 
-      return patients;
+      return states;
     }
 
     // GET api/patients/5

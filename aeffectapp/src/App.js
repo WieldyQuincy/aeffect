@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      {/*<SearchPage />*/}
+      {/* <SearchPage /> */}
       <FormPage />
       {/*<LineChart />*/}
     </div>

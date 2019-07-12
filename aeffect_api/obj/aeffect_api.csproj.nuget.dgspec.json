@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\aeffect_api.csproj": {}
+    "C:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\aeffect_api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\aeffect_api.csproj": {
+    "C:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\aeffect_api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\aeffect_api.csproj",
+        "projectUniqueName": "C:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\aeffect_api.csproj",
         "projectName": "aeffect_api",
-        "projectPath": "c:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\aeffect_api.csproj",
+        "projectPath": "C:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\aeffect_api.csproj",
         "packagesPath": "C:\\Users\\garif\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\obj\\",
+        "outputPath": "C:\\Users\\garif\\Documents\\Projects\\aeffect\\aeffect_api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
