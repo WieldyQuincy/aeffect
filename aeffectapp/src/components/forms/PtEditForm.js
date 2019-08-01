@@ -11,7 +11,7 @@ class PtEditForm extends React.Component {
     // const { location } = this.props;
     // const { search } = location;
     const query = queryString.parse(this.props.location.search);
-    console.log(query.patientId);
+    //console.log(query.patientId);
 
     this.state = {
       ptId: query.patientId || null,
@@ -68,7 +68,7 @@ class PtEditForm extends React.Component {
   componentDidMount() {
     this.getStates();
     this.getPatient();
-    console.log(this.state.patient);
+    //console.log(this.state.patient);
     //console.log(JSON.stringify(this.state.states));
     // console.log(this.props.location.search);
   }
@@ -93,7 +93,7 @@ class PtEditForm extends React.Component {
       return null;
     }
     console.log(this.state.patient);
-    console.log(this.state.patient.firstName);
+    //console.log(this.state.patient.firstName);
     //console.log(JSON.stringify(this.state.states));
     return (
       <div id="ptform">
@@ -107,6 +107,7 @@ class PtEditForm extends React.Component {
                 id="ptId"
                 name="ptId"
                 placeholder="ID"
+                value={this.state.patient[0].patientId}
                 onChange={this.handleChange}
               />
             </div>
@@ -118,7 +119,7 @@ class PtEditForm extends React.Component {
                 id="firstName"
                 name="firstName"
                 placeholder="First Name"
-                value={this.state.patient.firstName}
+                value={this.state.patient[0].firstName}
                 onChange={this.handleChange}
               />
             </div>
@@ -130,6 +131,7 @@ class PtEditForm extends React.Component {
                 id="lastName"
                 name="lastName"
                 placeholder="Last Name"
+                value={this.state.patient[0].lastName}
                 onChange={this.handleChange}
               />
             </div>
@@ -140,6 +142,7 @@ class PtEditForm extends React.Component {
                 className="form-control"
                 id="dob"
                 name="dob"
+                value={this.state.patient[0].dob}
                 onChange={this.handleChange}
               />
             </div>
@@ -152,6 +155,7 @@ class PtEditForm extends React.Component {
               id="address"
               name="address"
               placeholder="1234 Main St"
+              value={this.state.patient[0].addressLine1}
               onChange={this.handleChange}
             />
           </div>
@@ -163,6 +167,7 @@ class PtEditForm extends React.Component {
               id="address2"
               name="address2"
               placeholder="Apartment, studio, or floor"
+              value={this.state.patient[0].addressLine2}
               onChange={this.handleChange}
             />
           </div>
@@ -174,6 +179,7 @@ class PtEditForm extends React.Component {
                 className="form-control"
                 id="city"
                 name="city"
+                value={this.state.patient[0].city}
                 onChange={this.handleChange}
               />
             </div>
@@ -183,7 +189,8 @@ class PtEditForm extends React.Component {
                 id="state"
                 name="state"
                 className="form-control"
-                defaultValue="Choose..."
+                //defaultValue="Choose..."
+                value={this.state.patient[0].state}
                 onChange={this.handleChange}
               >
                 <option>Choose...</option>
@@ -202,6 +209,7 @@ class PtEditForm extends React.Component {
                 className="form-control"
                 id="zipCode"
                 name="zipCode"
+                value={this.state.patient[0].zip}
                 onChange={this.handleChange}
               />
             </div>
@@ -214,6 +222,7 @@ class PtEditForm extends React.Component {
                 className="form-control"
                 id="account"
                 name="account"
+                value={this.state.patient[0].account}
                 onChange={this.handleChange}
               />
             </div>
@@ -224,6 +233,7 @@ class PtEditForm extends React.Component {
                 className="form-control"
                 id="medRecord"
                 name="medRecord"
+                value={this.state.patient[0].medRecord}
                 onChange={this.handleChange}
               />
             </div>
@@ -233,6 +243,7 @@ class PtEditForm extends React.Component {
                 className="form-control"
                 id="unitId"
                 name="unitId"
+                value={this.state.patient[0].unitId}
                 onChange={this.handleChange}
               >
                 <option>1</option>
@@ -243,7 +254,7 @@ class PtEditForm extends React.Component {
             </div>
           </div>
           <button id="pt-form-submit" type="submit" className="btn btn-primary">
-            Submit
+            Update
           </button>
         </form>
       </div>
