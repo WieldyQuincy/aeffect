@@ -31,7 +31,7 @@ namespace aeffect_api.AeffectModel
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=(LocalDB)\\MSSQLLocalDB;Database=Aeffect;Trusted_Connection=True;MultipleActiveResultSets=True");
             }
         }
@@ -247,7 +247,8 @@ namespace aeffect_api.AeffectModel
 
                 entity.Property(e => e.Dob)
                     .HasColumnName("dob")
-                    .HasColumnType("date");
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.FirstName)
                     .HasMaxLength(50)

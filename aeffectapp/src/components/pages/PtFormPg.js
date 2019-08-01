@@ -1,8 +1,8 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar.js";
-import PtTable from "../tables/PtTable.js";
+import PtForm from "../forms/PtForm.js";
 
-class PtSearch extends React.Component {
+class PtFormPg extends React.Component {
   render() {
     return (
       <div className="container-fluid">
@@ -11,11 +11,11 @@ class PtSearch extends React.Component {
             <Sidebar />
           </div>
           <div className="col-md-10">
-            <PtTable />
+            <PtForm />
           </div>
         </div>
       </div>
     );
   }
 }
-export default PtSearch;
+export default PtFormPg;

@@ -1,9 +1,8 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar.js";
-import LineChart from "../charts/LineChart.js";
-import PieChart from "../charts/PieChart";
+import PtEditForm from "../forms/PtEditForm.js";
 
-class Home extends React.Component {
+class PtFormPg extends React.Component {
   render() {
     return (
       <div className="container-fluid">
@@ -12,14 +11,11 @@ class Home extends React.Component {
             <Sidebar />
           </div>
           <div className="col-md-10">
-            <LineChart />
-          </div>
-          <div>
-            <PieChart />
+            <PtEditForm />
           </div>
         </div>
       </div>
     );
   }
 }
-export default Home;
+export default PtFormPg;

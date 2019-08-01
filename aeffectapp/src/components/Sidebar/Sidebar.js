@@ -9,7 +9,7 @@ class Sidebar extends React.Component {
           <div className="sidebar-sticky">
             <ul className="nav flex-column">
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -17,9 +17,9 @@ class Sidebar extends React.Component {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-home"
                   >
                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -29,7 +29,7 @@ class Sidebar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -37,9 +37,9 @@ class Sidebar extends React.Component {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-file"
                   >
                     <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
@@ -49,7 +49,7 @@ class Sidebar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -57,9 +57,9 @@ class Sidebar extends React.Component {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-shopping-cart"
                   >
                     <circle cx="9" cy="21" r="1" />
@@ -70,7 +70,7 @@ class Sidebar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -78,9 +78,9 @@ class Sidebar extends React.Component {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-users"
                   >
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -92,7 +92,7 @@ class Sidebar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -100,9 +100,9 @@ class Sidebar extends React.Component {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-bar-chart-2"
                   >
                     <line x1="18" y1="20" x2="18" y2="10" />
@@ -113,7 +113,7 @@ class Sidebar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -121,9 +121,9 @@ class Sidebar extends React.Component {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-layers"
                   >
                     <polygon points="12 2 2 7 12 12 22 7 12 2" />

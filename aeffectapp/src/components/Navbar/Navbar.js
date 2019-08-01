@@ -6,7 +6,7 @@ class Navbar extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             Aeffect
           </a>
           <button
@@ -24,23 +24,14 @@ class Navbar extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <Link to="/">
-                <li className="nav-item active">
-                  <a className="nav-link" href="#">
-                    Home <span className="sr-only">(current)</span>
-                  </a>
+                <li className="nav-item active nav-link">
+                  Home <span className="sr-only">(current)</span>
                 </li>
               </Link>
-              {/* <Link to="/form">
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Form
-                  </a>
-                </li>
-              </Link> */}
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   id="navbarDropdown"
                   role="button"
                   data-toggle="dropdown"
@@ -50,29 +41,18 @@ class Navbar extends React.Component {
                   Portal
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <Link to="/addPatient">
-                    <a className="dropdown-item" href="#">
-                      Add Patient
-                    </a>
+                  <Link to="/addPatient" className="dropdown-item">
+                    Add Patient
                   </Link>
-                  <Link to="/search">
-                    <a className="dropdown-item" href="#">
-                      Patient Search
-                    </a>
+                  <Link to="/search" className="dropdown-item">
+                    Patient Search
                   </Link>
                   <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/">
                     Reporting
                   </a>
                 </div>
               </li>
-              {/* <Link to="/search">
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Search
-                  </a>
-                </li>
-              </Link> */}
             </ul>
             <form className="form-inline my-2 my-lg-0">
               <input

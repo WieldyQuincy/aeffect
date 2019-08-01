@@ -1,13 +1,20 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
+import queryString from "query-string";
 import "./PtForm.css";
 
-class PtForm extends React.Component {
+class PtEditForm extends React.Component {
   constructor(props) {
     super(props);
 
+    //console.log(this.props.location.search);
+    // const { location } = this.props;
+    // const { search } = location;
+    const query = queryString.parse(this.props.location.search);
+    console.log(query.patientId);
+
     this.state = {
-      states: null,
-      ptId: null,
+      ptId: query.patientId || null,
       firstName: null,
       lastName: null,
       dob: null,
@@ -18,7 +25,9 @@ class PtForm extends React.Component {
       zipCode: null,
       account: null,
       medRecord: null,
-      unitId: null
+      unitId: null,
+      states: null,
+      patient: null
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -47,8 +56,8 @@ class PtForm extends React.Component {
       unitId: this.state.unitId
     });
 
-    fetch("https://localhost:5001/api/patients/add", {
-      method: "POST",
+    fetch("https://localhost:5001/api/PtEdit", {
+      method: "PUT",
       mode: "cors",
       cache: "no-cache",
       headers: { "Content-Type": "application/json" },
@@ -58,7 +67,16 @@ class PtForm extends React.Component {
 
   componentDidMount() {
     this.getStates();
+    this.getPatient();
+    console.log(this.state.patient);
     //console.log(JSON.stringify(this.state.states));
+    // console.log(this.props.location.search);
+  }
+
+  getPatient() {
+    fetch("https://localhost:5001/api/PtEditPg/" + this.state.ptId)
+      .then(response => response.json())
+      .then(data => this.setState({ patient: data }));
   }
 
   getStates() {
@@ -71,7 +89,12 @@ class PtForm extends React.Component {
     if (this.state.states === null) {
       return null;
     }
-    // console.log(JSON.stringify(this.state.states));
+    if (this.state.patient === null) {
+      return null;
+    }
+    console.log(this.state.patient);
+    console.log(this.state.patient.firstName);
+    //console.log(JSON.stringify(this.state.states));
     return (
       <div id="ptform">
         <form onSubmit={this.handleSubmit}>
@@ -95,6 +118,7 @@ class PtForm extends React.Component {
                 id="firstName"
                 name="firstName"
                 placeholder="First Name"
+                value={this.state.patient.firstName}
                 onChange={this.handleChange}
               />
             </div>
@@ -227,4 +251,4 @@ class PtForm extends React.Component {
   }
 }
 
-export default PtForm;
+export default withRouter(PtEditForm);

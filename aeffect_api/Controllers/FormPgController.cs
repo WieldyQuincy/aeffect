@@ -7,6 +7,25 @@ using aeffect_api.AeffectModel;
 
 namespace aeffect_api.Controllers
 {
+
+  public class AddPtRequest
+  {
+
+    public int ptId { get; set; }
+    public string firstName { get; set; }
+    public string lastName { get; set; }
+    public string dob { get; set; }
+    public string address { get; set; }
+    public string address2 { get; set; }
+    public string city { get; set; }
+    public string state { get; set; }
+    public int zipCode { get; set; }
+    public int account { get; set; }
+    public int medRecord { get; set; }
+    public int unitId { get; set; }
+  }
+
+
   [Route("api/[controller]")]
   [ApiController]
   public class FormPgController : ControllerBase
@@ -23,6 +42,33 @@ namespace aeffect_api.Controllers
       }
 
       return states;
+    }
+
+    // POST api/states/add?stateID=ZZ&stateName=Zambia
+    [HttpPost("/api/patients/add")]
+    public void Post([FromBody] AddPtRequest AddPtRequest)
+    //public void Get([FromQuery] string stateID, [FromQuery] string stateName)
+    {
+
+      Patient patient = new Patient();
+      patient.PatientId = AddPtRequest.ptId;
+      patient.FirstName = AddPtRequest.firstName;
+      patient.LastName = AddPtRequest.lastName;
+      patient.Dob = AddPtRequest.dob;
+      patient.AddressLine1 = AddPtRequest.address;
+      patient.AddressLine2 = AddPtRequest.address2;
+      patient.City = AddPtRequest.city;
+      patient.State = AddPtRequest.state;
+      patient.Zip = AddPtRequest.zipCode;
+      patient.Account = AddPtRequest.account;
+      patient.MedRecord = AddPtRequest.medRecord;
+      patient.UnitId = AddPtRequest.unitId;
+
+      using (var DB = new AeffectContext())
+      {
+        DB.Patient.Add(patient);
+        DB.SaveChanges();
+      }
     }
 
     // // GET api/patients/5
